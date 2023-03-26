@@ -1,0 +1,39 @@
+package me.zeroest.designpattern.opserver.after.subject;
+
+import me.zeroest.designpattern.opserver.after.observer.Observer;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+public class ChatServer implements Subject {
+
+    private Map<String, List<Observer>> observersBySubject = new HashMap<>();
+
+    @Override
+    public void registerObserver(String subject, Observer observer) {
+        if (observersBySubject.containsKey(subject)) {
+            observersBySubject.get(subject).add(observer);
+        } else {
+            ArrayList<Observer> observers = new ArrayList<>();
+            observers.add(observer);
+            observersBySubject.put(subject, observers);
+        }
+    }
+
+    @Override
+    public void unregisterObserver(String subject, Observer observer) {
+        if (observersBySubject.containsKey(subject)) {
+            observersBySubject.get(subject).remove(observer);
+        }
+    }
+
+    @Override
+    public void notifyObservers(String subject, String message) {
+        if (observersBySubject.containsKey(subject)) {
+            observersBySubject.get(subject).forEach(observer -> observer.update(message));
+        }
+    }
+}
