@@ -1,4 +1,4 @@
-package me.zeroest.designpattern.opserver.after.observer;
+package me.zeroest.designpattern.observer.after.observer;
 
 public class User implements Observer {
     public User(String name) {

@@ -1,8 +1,8 @@
-package me.zeroest.designpattern.opserver.after;
+package me.zeroest.designpattern.observer.after;
 
-import me.zeroest.designpattern.opserver.after.observer.User;
-import me.zeroest.designpattern.opserver.after.subject.DesignPatternSubject;
-import me.zeroest.designpattern.opserver.after.subject.HelloSubject;
+import me.zeroest.designpattern.observer.after.observer.User;
+import me.zeroest.designpattern.observer.after.subject.DesignPatternSubject;
+import me.zeroest.designpattern.observer.after.subject.HelloSubject;
 
 public class Client {
     public static void main(String[] args) {

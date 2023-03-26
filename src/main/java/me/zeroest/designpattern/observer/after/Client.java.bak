@@ -1,7 +1,7 @@
-package me.zeroest.designpattern.opserver.after;
+package me.zeroest.designpattern.observer.after;
 
-import me.zeroest.designpattern.opserver.after.subject.ChatServer;
-import me.zeroest.designpattern.opserver.after.observer.User;
+import me.zeroest.designpattern.observer.after.subject.ChatServer;
+import me.zeroest.designpattern.observer.after.observer.User;
 
 public class Client {
     private static final String SUBJECT_DESIGN_PATTERN = "DesignPattern";

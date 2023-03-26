@@ -1,4 +1,4 @@
-package me.zeroest.designpattern.opserver.before;
+package me.zeroest.designpattern.observer.before;
 
 import java.util.List;
 

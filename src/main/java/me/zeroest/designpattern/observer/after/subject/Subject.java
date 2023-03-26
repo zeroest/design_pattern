@@ -1,6 +1,6 @@
-package me.zeroest.designpattern.opserver.after.subject;
+package me.zeroest.designpattern.observer.after.subject;
 
-import me.zeroest.designpattern.opserver.after.observer.Observer;
+import me.zeroest.designpattern.observer.after.observer.Observer;
 
 public interface Subject {
     void registerObserver(Observer observer);

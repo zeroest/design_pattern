@@ -1,4 +1,4 @@
-package me.zeroest.designpattern.opserver.before;
+package me.zeroest.designpattern.observer.before;
 
 public class Client {
     public static void main(String[] args) {
