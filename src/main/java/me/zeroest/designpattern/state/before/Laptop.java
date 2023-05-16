@@ -22,6 +22,7 @@ public class Laptop {
         this.powerState = powerState;
     }
 
+    // 추가된 상태 조건으로 인해 코드가 복잡해짐
     public void powerPush(){
         if (ON.equals(this.powerState)) {
             setPowerState(Laptop.OFF);
