@@ -1,0 +1,37 @@
+package me.zeroest.designpattern.behavior.observer.after;
+
+import me.zeroest.designpattern.behavior.observer.after.subject.ChatServer;
+import me.zeroest.designpattern.behavior.observer.after.observer.User;
+
+public class Client {
+    private static final String SUBJECT_DESIGN_PATTERN = "DesignPattern";
+    private static final String SUBJECT_HELLO = "Hello";
+
+    public static void main(String[] args) {
+
+        ChatServer chatServer = new ChatServer();
+
+        User user1 = new User("user1");
+        chatServer.registerObserver(SUBJECT_DESIGN_PATTERN, user1);
+        chatServer.registerObserver(SUBJECT_HELLO, user1);
+        User user2 = new User("user2");
+        chatServer.registerObserver(SUBJECT_DESIGN_PATTERN, user2);
+
+        chatServer.notifyObservers(SUBJECT_DESIGN_PATTERN, "Observer");
+        chatServer.notifyObservers(SUBJECT_DESIGN_PATTERN, "Visitor");
+        /*
+        user1 received : Observer
+        user2 received : Observer
+        user1 received : Visitor
+        user2 received : Visitor
+        */
+
+        chatServer.notifyObservers(SUBJECT_HELLO, "Hello");
+        chatServer.notifyObservers(SUBJECT_HELLO, "World");
+        /*
+        user1 received : Hello
+        user1 received : World
+        */
+
+    }
+}

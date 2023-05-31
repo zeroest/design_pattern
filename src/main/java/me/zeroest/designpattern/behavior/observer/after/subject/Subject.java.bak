@@ -1,0 +1,9 @@
+package me.zeroest.designpattern.behavior.observer.after.subject;
+
+import me.zeroest.designpattern.behavior.observer.after.observer.Observer;
+
+public interface SubjectBak {
+    void registerObserver(String subject, Observer observer);
+    void unregisterObserver(String subject, Observer observer);
+    void notifyObservers(String subject, String message);
+}
